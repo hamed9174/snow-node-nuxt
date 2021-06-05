@@ -3,6 +3,15 @@ const mongoDb = require('mongodb')
 const jwt = require('jsonwebtoken')
 
 const repo = {
+    findById:(id , next) => {
+        baseRepo.connect((err , db) => {
+            if(err) next(err)
+            else {
+                let objId = new mongoDb.ObjectID(id)
+                db.collection('users').findOne({_id : objId} , next)
+            }
+        })
+    },
     findByUsername:(username , next) =>{
         baseRepo.connect((err , db) => {
             if(err) next(err)
@@ -37,7 +46,6 @@ const repo = {
         baseRepo.connect((err , db) => {
             if (err) next(err);
             else {
-                console.log(user._id)
                 const objId = new mongoDb.ObjectID(user._id);
                 db.collection('users').updateOne({_id : objId}, {$set : user} , next)
             }

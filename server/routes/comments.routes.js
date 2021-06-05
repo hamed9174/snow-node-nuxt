@@ -11,9 +11,8 @@ router.use('/' , expressJWT({
 router.get('/', commentsController.fetchAll)
 
 router.post('/' ,commentsController.create )
+router.delete('/' ,commentsController.deleteMy )
+router.put('/' ,commentsController.updateMy )
 
-router.post('/my' ,commentsController.reply )
-router.delete('/my' ,commentsController.delete )
-router.put('/my' ,commentsController.update )
 
 module.exports = router

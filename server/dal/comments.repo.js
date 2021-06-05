@@ -62,6 +62,17 @@ const repo = {
                 db.collection('comments').updateOne({_id : objId},{$set:comment}, next)
             }
         })
+    },
+    addNotification: (msg , next) => {
+        baseRepo.connect((err , db) => {
+            if (err) {
+                return;
+            }
+            else{
+                db.collection('notifications').insertOne({message : msg} , next)
+            }
+
+        })
     }
 }
 

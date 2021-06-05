@@ -5,6 +5,15 @@ const controller = {
     register:(req , res) => {
         const credentials = _.pick(req.body , ['username', 'email' , 'password']);
         credentials.username = credentials.username.toLowerCase();
+        credentials.lastName = '';
+        credentials.firstName = '';
+        credentials.company = '';
+        credentials.country = '';
+        credentials.city = '';
+        credentials.state = '';
+        credentials.about_me = '';
+        credentials.address = '';
+        credentials.img = '';
         usersRepo.findByUsername((credentials.username) , (err , user) =>{
             if (err) res.status(500).send(err)
             else if(user) res.status(400).send('این کاربر وجود دارد')
@@ -12,7 +21,8 @@ const controller = {
                 const salt = bcrypt.genSaltSync(10)
                 bcrypt.hash(credentials.password , salt).then(
                     hashedPassword => {
-                        usersRepo.create({username :credentials.username, email:credentials.email , password:hashedPassword} , (err , result) =>{
+                        credentials.password = hashedPassword
+                        usersRepo.create(credentials , (err , result) =>{
                             if(err) res.status(500).send(err)
                             else{
                                 usersRepo.findByUsername(credentials.username , (err , user) => {
@@ -67,7 +77,45 @@ const controller = {
 
         })
 
-    }
+    },
+    getUser:(req , res) => {
+        usersRepo.findById(req.user._id , (err , data) =>{
+            if (err) res.status(500).send(err);
+            else if (!data) {
+                res.status(500).send({msg : 'not'});
+            }
+            else {
+                res.send(data)
+            }
+        })
+    },
+    update:(req , res) => {
+        usersRepo.findById(req.user._id , (err , data) =>{
+            if (err) res.status(500).send(err);
+            else if (!data) {
+                res.status(500).send({msg : 'username or password not exist'});
+            }
+            else {
+                let id = data._id;
+                data = req.body;
+                data._id = id;
+                usersRepo.update(data , (err , data) =>{
+                    if (err) res.status(500).send(err);
+                    else {
+                        usersRepo.findById(req.user._id , (err , data) =>{
+                            if (err) res.status(500).send(err);
+                            else if (!data) {
+                                res.status(500).send({msg : 'not'});
+                            }
+                            else {
+                                res.send(data)
+                            }
+                        })
+                    }
+                })
+            }
+        })
+    },
 }
 
 module.exports = controller
