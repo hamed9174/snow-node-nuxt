@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Blogs from './views/dashboard/pages/Blogs'
 import About from "./views/dashboard/pages/About";
+import Contact from './views/dashboard/pages/Contact'
 
 Vue.use(Router)
 
@@ -53,6 +54,11 @@ export default new Router({
           name: 'Notifications',
           path: 'components/notifications',
           component: () => import('@/views/dashboard/component/Notifications'),
+        },
+        {
+          name: 'Contact',
+          path: '/contact',
+          component: Contact
         }
       ],
     },

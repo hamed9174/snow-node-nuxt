@@ -83,7 +83,7 @@
             bordered
           >
             <template v-slot:badge>
-              <span>5</span>
+              <span>{{notifications.length}}</span>
             </template>
 
             <v-icon>mdi-bell</v-icon>
@@ -100,7 +100,7 @@
             v-for="(n, i) in notifications"
             :key="`item-${i}`"
           >
-            <v-list-item-title v-text="n" />
+            <v-list-item-title v-text="n.message" @click="ReadNotification" />
           </app-bar-item>
         </div>
       </v-list>
@@ -123,6 +123,7 @@
 
   // Utilities
   import { mapState, mapMutations } from 'vuex'
+  import api from "../../../../services/api";
 
   export default {
     name: 'DashboardCoreAppBar',
@@ -162,22 +163,25 @@
 
     data: () => ({
       notifications: [
-        'Mike John Responded to your email',
-        'You have 5 new tasks',
-        'You\'re now friends with Andrew',
-        'Another Notification',
-        'Another one',
+
       ],
     }),
 
     computed: {
       ...mapState(['drawer']),
     },
-
+    async created(){
+      await api.get('notifications').then(
+        res => this.notifications = res.data.filter(note => note.read === false)
+      ).catch(err => console.log(err))
+    },
     methods: {
       ...mapMutations({
         setDrawer: 'SET_DRAWER',
       }),
+      ReadNotification(){
+        this.$router.push({name: 'Notifications'})
+      }
     },
   }
 </script>

@@ -1,6 +1,6 @@
-const fs = require('fs')
+const notificationRepo = require('../../dal/notifacations.repo');
+const blogsRepo = require('../../dal/blogs.repo');
 
-const blogsRepo = require('../../dal/blogs.repo')
 const controller = {
     fetchAll : (req , res) => {
         // fetch all blogs
@@ -73,12 +73,11 @@ const controller = {
                 blogsRepo.update(data._id , data , (err , result) => {
                     if (err) res.status('500').send(err);
                     else {
-                        blogsRepo.findById(id ,(err , data) => {
-                            if (err) {
-                                res.status('500')
-                                res.send(err)
-                            } else {
-                                // send data to client
+                        const message = `${req.user.username} added a comment`
+                        notificationRepo.create(message)
+                        blogsRepo.findById(id , (err , data) => {
+                            if (err) res.status(500).send(err);
+                            else {
                                 res.send(data)
                             }
                         })

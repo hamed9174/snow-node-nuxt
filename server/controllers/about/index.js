@@ -7,25 +7,6 @@ const controller = {
             else res.send(data[0])
         })
     },
-    // create:(req , res) => {
-    //     let about = req.body;
-    //
-    //     // edit about
-    //     aboutRepo.create(about ,(err , result) => {
-    //         if (err) {
-    //             res.status('500')
-    //             res.send(err)
-    //         } else {
-    //             // send result to client
-    //             portfoliosRepo.fetchAll((err , data) => {
-    //                 if(err) res.status(500).send(err)
-    //                 else {
-    //                     res.send(data)
-    //                 }
-    //             })
-    //         }
-    //     })
-    // },
     update:(req , res) => {
         let about = req.body
         aboutRepo.findById(about._id , (err , data) => {

@@ -127,6 +127,11 @@
           to: '/about',
         },
         {
+          icon: 'mdi-contacts',
+          title: 'contact us',
+          to: '/contact',
+        },
+        {
           title: 'notifications',
           icon: 'mdi-bell',
           to: '/components/notifications',

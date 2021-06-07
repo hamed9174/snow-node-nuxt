@@ -1,4 +1,6 @@
-const portfoliosRepo = require('../../dal/portfolios.repo')
+const portfoliosRepo = require('../../dal/portfolios.repo');
+const notificationRepo = require('../../dal/notifacations.repo');
+
 const controller = {
     fetchAll : (req , res) => {
         // send result to client
@@ -109,6 +111,8 @@ const controller = {
                 portfoliosRepo.update(data._id , data , (err , result) => {
                     if (err) res.status('500').send(err);
                     else {
+                        const message = `${req.user.username} added a comment`
+                        notificationRepo.create(message)
                         portfoliosRepo.findById(id ,(err , data) => {
                             if (err) {
                                 res.status('500')
