@@ -228,7 +228,7 @@
     },
     async created() {
       await api.get('user').then(res => {
-        this.user = res.data
+        this.user = res.data.user
       }).catch(err => console.log(err))
       await api.get('upload/image')
         .then(res => this.images = res.data)

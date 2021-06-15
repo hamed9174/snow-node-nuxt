@@ -56,9 +56,9 @@ const controller = {
                 commentsRepo.updateReply(comment._id , comment , (err , result) =>{
                     if (err) res.status(500).send(err);
                     else {
-                        commentsRepo.fetchUser(comment.userId , (err , comments) => {
-                            if (err) res.status(500).send(err);
-                            else res.send(comments)
+                        commentsRepo.fetchAll((err , data) => {
+                            if (err) res.status(500).send(err)
+                            else res.send(data)
                         })
                     }
                 })

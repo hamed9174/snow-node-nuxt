@@ -181,7 +181,7 @@ export default {
     },
   },
   async created() {
-    await api.get('http://localhost:3000/comments')
+    await api.get('comments')
       .then(res => this.comments = res.data)
       .catch(err => console.log(err));
   },
@@ -257,7 +257,7 @@ export default {
           ).catch(err => console.log(err))
       }
       else {
-        await api.put('comments/my', {
+        await api.put('comments', {
           message : this.message,
           orgComment : this.comment
         }).then(

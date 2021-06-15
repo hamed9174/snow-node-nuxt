@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const portfolioController = require('../controllers/portfolios')
+
 const expressJWT = require('express-jwt')
-router.use('/' , expressJWT({
+router.use('/comment' , expressJWT({
     secret : 'kmbjn898&*&^Y65fgVcbg',
     algorithms: ['HS256'] ,
     credentialsRequired : false

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Blogs from './views/dashboard/pages/Blogs'
 import About from "./views/dashboard/pages/About";
 import Contact from './views/dashboard/pages/Contact'
+import Login from "./views/Login";
 
 Vue.use(Router)
 
@@ -61,6 +62,11 @@ export default new Router({
           component: Contact
         }
       ],
+    },
+    {
+      path: '/login',
+      name : 'Login',
+      component: Login
     },
   ],
 })
