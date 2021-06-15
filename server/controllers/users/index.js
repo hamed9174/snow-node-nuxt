@@ -85,6 +85,9 @@ const controller = {
                 res.status(500).send({msg : 'not'});
             }
             else {
+                const user = data;
+                data = {};
+                data.user = user;
                 res.send(data)
             }
         })

@@ -6,7 +6,7 @@ const expressJWT = require('express-jwt')
 router.use('/' , expressJWT({
     secret : 'kmbjn898&*&^Y65fgVcbg',
     algorithms: ['HS256'] ,
-    credentialsRequired : true
+    credentialsRequired : false
 }))
 router.get('/', commentsController.fetchAll)
 
