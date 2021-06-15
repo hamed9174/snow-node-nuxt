@@ -11,17 +11,7 @@
       </div>
       <b-button @click="GoToAbout" pill class="about-btn" variant="outline-danger"><i class="fas fa-long-arrow-alt-down"></i></b-button>
     </div>
-    <div v-if="about" class="about col-12">
-      <div class="about-content text-center">
-        <h1 class="mb-4">About Our Agency</h1>
-        <p class="mb-3 text-secondary">
-          {{about.content}}
-        </p>
-        <div class="about-content">
-          <img :src="`${webUrl}/assets/images/${about.img}`" alt="">
-        </div>
-      </div>
-    </div>
+    <About />
     <div class="col-12 pattern">
       <div class="container">
         <div class="pattern-content">
@@ -138,6 +128,7 @@
 </template>
 
 <script>
+import About from "~/components/about";
 import Comments from "../components/comments/Comments";
 import Brands from "../components/brands/Brands";
 import Blogs from "../components/blogs/Blogs";
@@ -150,6 +141,7 @@ export default {
   title : 'Home',
   layout : 'index',
   components: {
+    About,
     Portfolio,
     Comments,
     Brands,
@@ -168,7 +160,6 @@ export default {
         title : '',
         message : ''
       },
-      about: null,
       show: true,
       modalShow : false
     }
