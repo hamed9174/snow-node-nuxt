@@ -22,7 +22,6 @@ const controller = {
                 })
             }
         })
-
     },
     fetchAll:(req , res) => {
         uploadRepo.findAll((err , data) => {
