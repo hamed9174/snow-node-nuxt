@@ -20,16 +20,11 @@ import {webUrl} from "~/services/xhr";
 
 export default {
   name: "about",
+  props:['about'],
   data(){
     return{
-      webUrl,
-      about : null
+      webUrl
     }
-  },
-  async created() {
-    await this.$api.$get('about').then(
-      res => this.about = res
-    ).catch(err => console.log(err))
   }
 }
 </script>

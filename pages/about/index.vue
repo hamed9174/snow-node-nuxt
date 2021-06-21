@@ -1,19 +1,24 @@
 <template>
   <div class="row">
-    <About />
+    <About :about="about" />
   </div>
 </template>
 <script>
-  import About from "~/components/about";
-  export default {
-    name : 'About',
-    head(){
-      return{
-        title : 'about'
-      }
-    },
-    components:{
-      About
+import {webUrl} from "~/services/xhr";
+
+export default {
+  name: "about",
+  data(){
+    return{
+      webUrl,
+      about : null
+    }
+  },
+  async asyncData({$api}) {
+    const about = await $api.$get('about')
+    return{
+      about : about
     }
   }
+}
 </script>

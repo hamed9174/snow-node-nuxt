@@ -11,7 +11,7 @@
       </div>
       <b-button @click="GoToAbout" pill class="about-btn" variant="outline-danger"><i class="fas fa-long-arrow-alt-down"></i></b-button>
     </div>
-    <About />
+    <About :about="about" />
     <div class="col-12 pattern">
       <div class="container">
         <div class="pattern-content">
@@ -166,8 +166,10 @@ export default {
   },
   async asyncData({$api}) {
     const portfolios = await $api.$get('portfolios')
+    const about = await $api.$get('about')
     return {
-      portfolios : portfolios
+      portfolios : portfolios,
+      about : about
     }
   },
   methods: {
