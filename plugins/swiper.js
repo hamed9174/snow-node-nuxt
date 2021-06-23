@@ -1,6 +1,0 @@
-import Vue from 'vue'
-import VueAwesomeSwiper from 'vue-awesome-swiper'
-Vue.use(VueAwesomeSwiper, /* { default options with global component } */)
-
-// import style
-import 'swiper/css/swiper.css'
