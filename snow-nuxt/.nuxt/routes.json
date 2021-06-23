@@ -2,64 +2,55 @@
   {
     "name": "about",
     "path": "/about",
-    "component": "G:\\\\theme\\\\snow-node-vue\\\\client\\\\pages\\\\about\\\\index.vue",
-    "chunkName": "pages/about/index",
-    "_name": "_716bf9d1"
+    "component": "G:\\\\theme\\\\snow-node-nuxt\\\\snow-node-nuxt\\\\pages\\\\about\\\\index.vue",
+    "chunkName": "pages/about/index"
   },
   {
     "name": "blog",
     "path": "/blog",
-    "component": "G:\\\\theme\\\\snow-node-vue\\\\client\\\\pages\\\\blog\\\\index.vue",
-    "chunkName": "pages/blog/index",
-    "_name": "_dcd04a18"
+    "component": "G:\\\\theme\\\\snow-node-nuxt\\\\snow-node-nuxt\\\\pages\\\\blog\\\\index.vue",
+    "chunkName": "pages/blog/index"
   },
   {
     "name": "contact",
     "path": "/contact",
-    "component": "G:\\\\theme\\\\snow-node-vue\\\\client\\\\pages\\\\contact\\\\index.vue",
-    "chunkName": "pages/contact/index",
-    "_name": "_9a73cb44"
+    "component": "G:\\\\theme\\\\snow-node-nuxt\\\\snow-node-nuxt\\\\pages\\\\contact\\\\index.vue",
+    "chunkName": "pages/contact/index"
   },
   {
     "name": "login",
     "path": "/login",
-    "component": "G:\\\\theme\\\\snow-node-vue\\\\client\\\\pages\\\\login\\\\index.vue",
-    "chunkName": "pages/login/index",
-    "_name": "_47986c75"
+    "component": "G:\\\\theme\\\\snow-node-nuxt\\\\snow-node-nuxt\\\\pages\\\\login\\\\index.vue",
+    "chunkName": "pages/login/index"
   },
   {
     "name": "portfolio",
     "path": "/portfolio",
-    "component": "G:\\\\theme\\\\snow-node-vue\\\\client\\\\pages\\\\portfolio\\\\index.vue",
-    "chunkName": "pages/portfolio/index",
-    "_name": "_3886db36"
+    "component": "G:\\\\theme\\\\snow-node-nuxt\\\\snow-node-nuxt\\\\pages\\\\portfolio\\\\index.vue",
+    "chunkName": "pages/portfolio/index"
   },
   {
     "name": "register",
     "path": "/register",
-    "component": "G:\\\\theme\\\\snow-node-vue\\\\client\\\\pages\\\\register\\\\index.vue",
-    "chunkName": "pages/register/index",
-    "_name": "_df14695a"
+    "component": "G:\\\\theme\\\\snow-node-nuxt\\\\snow-node-nuxt\\\\pages\\\\register\\\\index.vue",
+    "chunkName": "pages/register/index"
   },
   {
     "name": "single-blog-id",
     "path": "/single-blog/:id",
-    "component": "G:\\\\theme\\\\snow-node-vue\\\\client\\\\pages\\\\single-blog\\\\_id\\\\index.vue",
-    "chunkName": "pages/single-blog/_id/index",
-    "_name": "_38f50f63"
+    "component": "G:\\\\theme\\\\snow-node-nuxt\\\\snow-node-nuxt\\\\pages\\\\single-blog\\\\_id\\\\index.vue",
+    "chunkName": "pages/single-blog/_id/index"
   },
   {
     "name": "single-portfolio-id",
     "path": "/single-portfolio/:id",
-    "component": "G:\\\\theme\\\\snow-node-vue\\\\client\\\\pages\\\\single-portfolio\\\\_id\\\\index.vue",
-    "chunkName": "pages/single-portfolio/_id/index",
-    "_name": "_56c6e5f2"
+    "component": "G:\\\\theme\\\\snow-node-nuxt\\\\snow-node-nuxt\\\\pages\\\\single-portfolio\\\\_id\\\\index.vue",
+    "chunkName": "pages/single-portfolio/_id/index"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "G:\\\\theme\\\\snow-node-vue\\\\client\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_52050056"
+    "component": "G:\\\\theme\\\\snow-node-nuxt\\\\snow-node-nuxt\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
   }
 ]

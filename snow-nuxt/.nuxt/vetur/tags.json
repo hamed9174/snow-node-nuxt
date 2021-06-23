@@ -1,15 +1,18 @@
 {
+  "About": {
+    "description": "Auto imported from components/about.vue"
+  },
   "ContactForm": {
     "description": "Auto imported from components/ContactForm.vue"
+  },
+  "Brands": {
+    "description": "Auto imported from components/brands/Brands.vue"
   },
   "BlogsBlog": {
     "description": "Auto imported from components/blogs/blog.vue"
   },
   "Blogs": {
     "description": "Auto imported from components/blogs/Blogs.vue"
-  },
-  "Brands": {
-    "description": "Auto imported from components/brands/Brands.vue"
   },
   "Comments": {
     "description": "Auto imported from components/comments/Comments.vue"
