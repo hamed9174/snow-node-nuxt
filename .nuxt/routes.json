@@ -1,0 +1,56 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "G:\\\\theme\\\\snow-node-nuxt\\\\snow-node-nuxt\\\\pages\\\\about\\\\index.vue",
+    "chunkName": "pages/about/index"
+  },
+  {
+    "name": "blog",
+    "path": "/blog",
+    "component": "G:\\\\theme\\\\snow-node-nuxt\\\\snow-node-nuxt\\\\pages\\\\blog\\\\index.vue",
+    "chunkName": "pages/blog/index"
+  },
+  {
+    "name": "contact",
+    "path": "/contact",
+    "component": "G:\\\\theme\\\\snow-node-nuxt\\\\snow-node-nuxt\\\\pages\\\\contact\\\\index.vue",
+    "chunkName": "pages/contact/index"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "G:\\\\theme\\\\snow-node-nuxt\\\\snow-node-nuxt\\\\pages\\\\login\\\\index.vue",
+    "chunkName": "pages/login/index"
+  },
+  {
+    "name": "portfolio",
+    "path": "/portfolio",
+    "component": "G:\\\\theme\\\\snow-node-nuxt\\\\snow-node-nuxt\\\\pages\\\\portfolio\\\\index.vue",
+    "chunkName": "pages/portfolio/index"
+  },
+  {
+    "name": "register",
+    "path": "/register",
+    "component": "G:\\\\theme\\\\snow-node-nuxt\\\\snow-node-nuxt\\\\pages\\\\register\\\\index.vue",
+    "chunkName": "pages/register/index"
+  },
+  {
+    "name": "single-blog-id",
+    "path": "/single-blog/:id",
+    "component": "G:\\\\theme\\\\snow-node-nuxt\\\\snow-node-nuxt\\\\pages\\\\single-blog\\\\_id\\\\index.vue",
+    "chunkName": "pages/single-blog/_id/index"
+  },
+  {
+    "name": "single-portfolio-id",
+    "path": "/single-portfolio/:id",
+    "component": "G:\\\\theme\\\\snow-node-nuxt\\\\snow-node-nuxt\\\\pages\\\\single-portfolio\\\\_id\\\\index.vue",
+    "chunkName": "pages/single-portfolio/_id/index"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "G:\\\\theme\\\\snow-node-nuxt\\\\snow-node-nuxt\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
+  }
+]

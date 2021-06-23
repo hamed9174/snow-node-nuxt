@@ -1,0 +1,32 @@
+{
+  "About": {
+    "description": "Auto imported from components/about.vue"
+  },
+  "ContactForm": {
+    "description": "Auto imported from components/ContactForm.vue"
+  },
+  "Brands": {
+    "description": "Auto imported from components/brands/Brands.vue"
+  },
+  "BlogsBlog": {
+    "description": "Auto imported from components/blogs/blog.vue"
+  },
+  "Blogs": {
+    "description": "Auto imported from components/blogs/Blogs.vue"
+  },
+  "Comments": {
+    "description": "Auto imported from components/comments/Comments.vue"
+  },
+  "CommonFooter": {
+    "description": "Auto imported from components/common/Footer.vue"
+  },
+  "CommonHeader": {
+    "description": "Auto imported from components/common/Header.vue"
+  },
+  "CommonIndexHeader": {
+    "description": "Auto imported from components/common/indexHeader.vue"
+  },
+  "PortfoliosPortfolio": {
+    "description": "Auto imported from components/portfolios/Portfolio.vue"
+  }
+}
