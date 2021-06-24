@@ -9,6 +9,7 @@ import Portfolio from '../views/Portfolio.vue';
 import SingleBlog from '../views/SingleBlog'
 import SinglePortfolio from '../views/SinglePortfolio';
 import Logout from "../views/Logout";
+import Dashboard from "../views/Dashboard";
 
 Vue.use(VueRouter)
 
@@ -65,6 +66,11 @@ const routes = [{
         path: '/single-portfolio/:id',
         name: 'SinglePortfolio',
         component: SinglePortfolio
+    },
+    {
+        path: '/dashboard',
+        name: 'Dashboard',
+        component: Dashboard
     },
 ]
 
