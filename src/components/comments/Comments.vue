@@ -73,14 +73,16 @@ export default {
       method : ''
     }
   },
-  async beforeMount() {
-    await api.get('comments').then(
-      (res) => {
-        this.comments = res.data
-      }
-    ).catch(
-      err => console.log(err)
-    )
+  async mounted() {
+    if (this.$store.state.user){
+      await api.get('comments').then(
+          (res) => {
+            this.comments = res.data
+          }
+      ).catch(
+          err => console.log(err)
+      )
+    }
   },
   computed:{
     user() {

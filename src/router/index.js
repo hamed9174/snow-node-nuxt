@@ -8,6 +8,7 @@ import Blog from '../views/Blog.vue';
 import Portfolio from '../views/Portfolio.vue';
 import SingleBlog from '../views/SingleBlog'
 import SinglePortfolio from '../views/SinglePortfolio';
+import Logout from "../views/Logout";
 
 Vue.use(VueRouter)
 
@@ -20,6 +21,11 @@ const routes = [{
         path: '/login',
         name: 'Login',
         component: Login
+    },
+    {
+        path: '/logout',
+        name: 'Logout',
+        component: Logout
     },
     {
         path: '/register',

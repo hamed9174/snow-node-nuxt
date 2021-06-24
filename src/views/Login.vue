@@ -69,6 +69,7 @@ export default {
               sessionStorage.setItem('token', res.data.token)
               sessionStorage.setItem('user', JSON.stringify(res.data))
             }
+            this.$store.dispatch('addUser' ,res.data )
           }
       ).catch(err => console.log(err))
       this.form = {

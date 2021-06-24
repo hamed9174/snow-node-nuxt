@@ -12,25 +12,23 @@
 
 <script>
 import Footer from './components/common/Footer'
-  import { mapActions } from 'vuex'
   export default {
     components :{
       Footer
     },
-    created(){
-      let user ;
-      if (localStorage.getItem('user')){
-        user = JSON.parse(localStorage.getItem('user'))
-      } else if (sessionStorage.getItem('user')){
-        user = JSON.parse(sessionStorage.getItem('user'))
-      } else {
-        user = null
-      };
-      this.addUser(user)
+    beforeCreate(){
+      if (!this.$store.state.user){
+        let user ;
+        if (localStorage.getItem('user')){
+          user = JSON.parse(localStorage.getItem('user'))
+        } else if (sessionStorage.getItem('user')){
+          user = JSON.parse(sessionStorage.getItem('user'))
+        } else {
+          user = null
+        };
+        this.$store.dispatch('addUser', user)
+      }
     },
-    methods : {
-      ...mapActions(['addUser'])
-    }
   }
 </script>
 

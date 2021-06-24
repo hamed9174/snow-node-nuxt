@@ -33,7 +33,9 @@
         </router-link>
       </div>
       <div class="login col-lg-3 col-5 text-right" v-else>
-        <b-button @click="Logout" class="float-right" variant="outline-success">logout</b-button>
+        <router-link to="/logout">
+          <b-button class="float-right" variant="outline-success">logout</b-button>
+        </router-link>
         <router-link class="profile" to="/dashboard">
           <b-button><b-icon icon="person"></b-icon>{{user.username}}</b-button>
         </router-link>
@@ -55,7 +57,7 @@
 </template>
 
 <script>
-import {mapActions} from "vuex";
+// import {mapActions} from "vuex";
   export default {
     name: "Header",
     props:['fixed'],
@@ -72,15 +74,15 @@ import {mapActions} from "vuex";
       }
     },
     methods: {
-      ...mapActions(['setUser']),
-      Logout(){
-        localStorage.setItem('token' , null);
-        localStorage.setItem('user' , null);
-        sessionStorage.setItem('token' , null);
-        sessionStorage.setItem('user' , null);
-        this.setUser(null)
-        this.$router.push({name:'Home'})
-      },
+      // ...mapActions(['addUser']),
+      // Logout(){
+      //   localStorage.setItem('token' , null);
+      //   localStorage.setItem('user' , null);
+      //   sessionStorage.setItem('token' , null);
+      //   sessionStorage.setItem('user' , null);
+      //   this.addUser(null)
+      //   this.$router.push({path: '/'})
+      // },
       mobileMenuActive(){
         this.mobileMenu = true
       },
