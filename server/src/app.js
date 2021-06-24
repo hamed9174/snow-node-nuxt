@@ -2,7 +2,7 @@
 const express = require('express');
 const cors = require('cors');
 const router = require('../routes/index');
-let app = express();
+const app = express();
 app.use(cors());
 
 app.use(express.static(__dirname));

@@ -23,7 +23,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../snow-nuxt/snow-node-nuxt" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -44,6 +44,7 @@
       <workItem from="1624310395064" duration="2092000" />
       <workItem from="1624315025384" duration="547000" />
       <workItem from="1624459569434" duration="164000" />
+      <workItem from="1624574940240" duration="826000" />
     </task>
     <servers />
   </component>
