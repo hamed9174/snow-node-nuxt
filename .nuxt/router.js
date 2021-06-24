@@ -4,15 +4,16 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _0455d6d9 = () => interopDefault(import('..\\pages\\about\\index.vue' /* webpackChunkName: "pages/about/index" */))
-const _2afa3cec = () => interopDefault(import('..\\pages\\blog\\index.vue' /* webpackChunkName: "pages/blog/index" */))
-const _32acd566 = () => interopDefault(import('..\\pages\\contact\\index.vue' /* webpackChunkName: "pages/contact/index" */))
-const _4afb6d06 = () => interopDefault(import('..\\pages\\login\\index.vue' /* webpackChunkName: "pages/login/index" */))
-const _59aaf43e = () => interopDefault(import('..\\pages\\portfolio\\index.vue' /* webpackChunkName: "pages/portfolio/index" */))
-const _0d66714b = () => interopDefault(import('..\\pages\\register\\index.vue' /* webpackChunkName: "pages/register/index" */))
-const _f887854a = () => interopDefault(import('..\\pages\\single-blog\\_id\\index.vue' /* webpackChunkName: "pages/single-blog/_id/index" */))
-const _c1094be2 = () => interopDefault(import('..\\pages\\single-portfolio\\_id\\index.vue' /* webpackChunkName: "pages/single-portfolio/_id/index" */))
-const _95138764 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _3f19be60 = () => interopDefault(import('..\\pages\\about\\index.vue' /* webpackChunkName: "pages/about/index" */))
+const _63a05815 = () => interopDefault(import('..\\pages\\blog\\index.vue' /* webpackChunkName: "pages/blog/index" */))
+const _7c9f7d9d = () => interopDefault(import('..\\pages\\contact\\index.vue' /* webpackChunkName: "pages/contact/index" */))
+const _b31b042e = () => interopDefault(import('..\\pages\\dashboard\\index.vue' /* webpackChunkName: "pages/dashboard/index" */))
+const _92c0d918 = () => interopDefault(import('..\\pages\\login\\index.vue' /* webpackChunkName: "pages/login/index" */))
+const _1cd72a96 = () => interopDefault(import('..\\pages\\portfolio\\index.vue' /* webpackChunkName: "pages/portfolio/index" */))
+const _01c8cff4 = () => interopDefault(import('..\\pages\\register\\index.vue' /* webpackChunkName: "pages/register/index" */))
+const _0fe439f8 = () => interopDefault(import('..\\pages\\single-blog\\_id\\index.vue' /* webpackChunkName: "pages/single-blog/_id/index" */))
+const _346853f4 = () => interopDefault(import('..\\pages\\single-portfolio\\_id\\index.vue' /* webpackChunkName: "pages/single-portfolio/_id/index" */))
+const _0213ab92 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -27,39 +28,43 @@ export const routerOptions = {
 
   routes: [{
     path: "/about",
-    component: _0455d6d9,
+    component: _3f19be60,
     name: "about"
   }, {
     path: "/blog",
-    component: _2afa3cec,
+    component: _63a05815,
     name: "blog"
   }, {
     path: "/contact",
-    component: _32acd566,
+    component: _7c9f7d9d,
     name: "contact"
   }, {
+    path: "/dashboard",
+    component: _b31b042e,
+    name: "dashboard"
+  }, {
     path: "/login",
-    component: _4afb6d06,
+    component: _92c0d918,
     name: "login"
   }, {
     path: "/portfolio",
-    component: _59aaf43e,
+    component: _1cd72a96,
     name: "portfolio"
   }, {
     path: "/register",
-    component: _0d66714b,
+    component: _01c8cff4,
     name: "register"
   }, {
     path: "/single-blog/:id",
-    component: _f887854a,
+    component: _0fe439f8,
     name: "single-blog-id"
   }, {
     path: "/single-portfolio/:id",
-    component: _c1094be2,
+    component: _346853f4,
     name: "single-portfolio-id"
   }, {
     path: "/",
-    component: _95138764,
+    component: _0213ab92,
     name: "index"
   }],
 

@@ -13,14 +13,14 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_da7523e2 from 'nuxt_plugin_plugin_da7523e2' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_bootstrapvue_7ee7663e from 'nuxt_plugin_bootstrapvue_7ee7663e' // Source: .\\bootstrap-vue.js (mode: 'all')
-import nuxt_plugin_axios_38c37e9c from 'nuxt_plugin_axios_38c37e9c' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_plugin_406640ac from 'nuxt_plugin_plugin_406640ac' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_bootstrapvue_0110f5fe from 'nuxt_plugin_bootstrapvue_0110f5fe' // Source: .\\bootstrap-vue.js (mode: 'all')
+import nuxt_plugin_axios_50d856cf from 'nuxt_plugin_axios_50d856cf' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_swiper_076f49ea from 'nuxt_plugin_swiper_076f49ea' // Source: ..\\plugins\\swiper.js (mode: 'all')
 import nuxt_plugin_vuescrollfixedheader_4c20b968 from 'nuxt_plugin_vuescrollfixedheader_4c20b968' // Source: ..\\plugins\\vue-scroll-fixed-header.js (mode: 'client')
 import nuxt_plugin_axios_397e53b5 from 'nuxt_plugin_axios_397e53b5' // Source: ..\\plugins\\axios.js (mode: 'all')
 import nuxt_plugin_veeValidate_810cbac2 from 'nuxt_plugin_veeValidate_810cbac2' // Source: ..\\plugins\\veeValidate.js (mode: 'client')
-import nuxt_plugin_auth_6dfceb84 from 'nuxt_plugin_auth_6dfceb84' // Source: .\\auth.js (mode: 'all')
+import nuxt_plugin_auth_356486fe from 'nuxt_plugin_auth_356486fe' // Source: .\\auth.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -213,16 +213,16 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_da7523e2 === 'function') {
-    await nuxt_plugin_plugin_da7523e2(app.context, inject)
+  if (typeof nuxt_plugin_plugin_406640ac === 'function') {
+    await nuxt_plugin_plugin_406640ac(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_bootstrapvue_7ee7663e === 'function') {
-    await nuxt_plugin_bootstrapvue_7ee7663e(app.context, inject)
+  if (typeof nuxt_plugin_bootstrapvue_0110f5fe === 'function') {
+    await nuxt_plugin_bootstrapvue_0110f5fe(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_38c37e9c === 'function') {
-    await nuxt_plugin_axios_38c37e9c(app.context, inject)
+  if (typeof nuxt_plugin_axios_50d856cf === 'function') {
+    await nuxt_plugin_axios_50d856cf(app.context, inject)
   }
 
   if (typeof nuxt_plugin_swiper_076f49ea === 'function') {
@@ -241,8 +241,8 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_veeValidate_810cbac2(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_auth_6dfceb84 === 'function') {
-    await nuxt_plugin_auth_6dfceb84(app.context, inject)
+  if (typeof nuxt_plugin_auth_356486fe === 'function') {
+    await nuxt_plugin_auth_356486fe(app.context, inject)
   }
 
   // Lock enablePreview in context
