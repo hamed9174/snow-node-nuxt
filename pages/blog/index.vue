@@ -1,5 +1,5 @@
 <template>
-  <div class="blog row pt-5" v-if="blogs.length">
+  <div class="blog row pt-5">
     <div class="container">
       <div :class="['toggle-menu' , 'text-center' ,{ 'toggle-menu-black' : menuActive}]">
         <i @click="selectMenuActive" class="fas fa-th-large"></i>
@@ -7,12 +7,13 @@
       <transition name="categories" v-if="categories.length">
         <div v-show="menuActive" ref="categoryMenu" class="blog-menu mt-3">
           <ul>
+            <li @click="MenuActive($event , 'all')">All</li>
             <li v-for="category in categories" @click="MenuActive($event , category)">{{category.toUpperCase()}}</li>
           </ul>
         </div>
       </transition>
 
-      <div class="single-blogs" v-for="blog in blogs">
+      <div class="single-blogs" v-for="blog in blogs" v-if="blogs.length">
         <router-link :to="`single-blog/${blog._id}`">
           <div class="blog-img">
             <img :src="require(`@/assets/images/${blog.img}`)" alt="">
@@ -53,6 +54,7 @@
         const blogs = await $api.get('blogs')
         const categories = await $api.get('blog-category')
         return {
+          blog : blogs.data ,
           blogs : blogs.data ,
           categories : categories.data[0].categories
         }
@@ -81,6 +83,7 @@
           this.BlogsUpdate(blogs)
         },
         BlogsUpdate(blogs){
+          console.log(blogs)
           if(blogs === 'all'){
             this.blogs = this.blog
           } else {

@@ -14,6 +14,9 @@
   "Brands": {
     "description": "Auto imported from components/brands/Brands.vue"
   },
+  "Comments": {
+    "description": "Auto imported from components/comments/Comments.vue"
+  },
   "CommonFooter": {
     "description": "Auto imported from components/common/Footer.vue"
   },
@@ -22,9 +25,6 @@
   },
   "CommonIndexHeader": {
     "description": "Auto imported from components/common/indexHeader.vue"
-  },
-  "Comments": {
-    "description": "Auto imported from components/comments/Comments.vue"
   },
   "PortfoliosPortfolio": {
     "description": "Auto imported from components/portfolios/Portfolio.vue"

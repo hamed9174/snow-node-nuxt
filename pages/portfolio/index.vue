@@ -49,6 +49,7 @@
     async asyncData({$api}) {
       const portfolios = await $api.$get('portfolios')
       return {
+        portfolio : portfolios,
         portfolios : portfolios
       }
     },
