@@ -3,60 +3,70 @@
     "name": "about",
     "path": "/about",
     "component": "G:\\\\theme\\\\snow-nuxt\\\\snow-node-nuxt\\\\pages\\\\about\\\\index.vue",
-    "chunkName": "pages/about/index"
+    "chunkName": "pages/about/index",
+    "_name": "_3f19be60"
   },
   {
     "name": "blog",
     "path": "/blog",
     "component": "G:\\\\theme\\\\snow-nuxt\\\\snow-node-nuxt\\\\pages\\\\blog\\\\index.vue",
-    "chunkName": "pages/blog/index"
+    "chunkName": "pages/blog/index",
+    "_name": "_63a05815"
   },
   {
     "name": "contact",
     "path": "/contact",
     "component": "G:\\\\theme\\\\snow-nuxt\\\\snow-node-nuxt\\\\pages\\\\contact\\\\index.vue",
-    "chunkName": "pages/contact/index"
+    "chunkName": "pages/contact/index",
+    "_name": "_7c9f7d9d"
   },
   {
     "name": "dashboard",
     "path": "/dashboard",
     "component": "G:\\\\theme\\\\snow-nuxt\\\\snow-node-nuxt\\\\pages\\\\dashboard\\\\index.vue",
-    "chunkName": "pages/dashboard/index"
+    "chunkName": "pages/dashboard/index",
+    "_name": "_b31b042e"
   },
   {
     "name": "login",
     "path": "/login",
     "component": "G:\\\\theme\\\\snow-nuxt\\\\snow-node-nuxt\\\\pages\\\\login\\\\index.vue",
-    "chunkName": "pages/login/index"
+    "chunkName": "pages/login/index",
+    "_name": "_92c0d918"
   },
   {
     "name": "portfolio",
     "path": "/portfolio",
     "component": "G:\\\\theme\\\\snow-nuxt\\\\snow-node-nuxt\\\\pages\\\\portfolio\\\\index.vue",
-    "chunkName": "pages/portfolio/index"
+    "chunkName": "pages/portfolio/index",
+    "_name": "_1cd72a96"
   },
   {
     "name": "register",
     "path": "/register",
     "component": "G:\\\\theme\\\\snow-nuxt\\\\snow-node-nuxt\\\\pages\\\\register\\\\index.vue",
-    "chunkName": "pages/register/index"
+    "chunkName": "pages/register/index",
+    "_name": "_01c8cff4"
   },
   {
     "name": "single-blog-id",
     "path": "/single-blog/:id",
     "component": "G:\\\\theme\\\\snow-nuxt\\\\snow-node-nuxt\\\\pages\\\\single-blog\\\\_id\\\\index.vue",
-    "chunkName": "pages/single-blog/_id/index"
+    "chunkName": "pages/single-blog/_id/index",
+    "_name": "_0fe439f8"
   },
   {
     "name": "single-portfolio-id",
     "path": "/single-portfolio/:id",
     "component": "G:\\\\theme\\\\snow-nuxt\\\\snow-node-nuxt\\\\pages\\\\single-portfolio\\\\_id\\\\index.vue",
-    "chunkName": "pages/single-portfolio/_id/index"
+    "chunkName": "pages/single-portfolio/_id/index",
+    "_name": "_346853f4"
   },
   {
     "name": "index",
     "path": "/",
     "component": "G:\\\\theme\\\\snow-nuxt\\\\snow-node-nuxt\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_0213ab92"
   }
 ]
