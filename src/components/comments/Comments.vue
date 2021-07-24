@@ -55,6 +55,7 @@ export default {
     Swiper,
     SwiperSlide
   },
+  props:['comments'],
   data() {
     return {
       add_reply :false,
@@ -68,20 +69,8 @@ export default {
           clickable: true
         },
       },
-      comments:[],
       comment_id : '',
       method : ''
-    }
-  },
-  async mounted() {
-    if (this.$store.state.user){
-      await api.get('comments').then(
-          (res) => {
-            this.comments = res.data
-          }
-      ).catch(
-          err => console.log(err)
-      )
     }
   },
   computed:{

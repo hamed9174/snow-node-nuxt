@@ -12,7 +12,7 @@ const api =  () => {
         baseURL : baseURL,
         headers: {
             common: {
-                Accept: 'application/json',
+                Accept : 'application/json',
                 'Content-Type': 'application/json',
                 'Authorization' : 'Bearer ' + token
             }

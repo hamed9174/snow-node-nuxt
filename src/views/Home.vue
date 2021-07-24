@@ -88,7 +88,7 @@
           </div>
         </div>
       </div>
-      <Comments/>
+      <Comments :comments="comments"/>
       <div class="col-12 brands">
         <div class="brands-slider">
           <Brands/>
@@ -173,7 +173,6 @@ export default {
       fixed:false,
       portfolios : [],
       comments : [],
-      fixed: false,
       contact: {
         email: '',
         name: '',
@@ -181,10 +180,28 @@ export default {
         message : ''
       },
       show: true,
-      modalShow : false
+      modalShow : false,
     }
   },
-  async beforeMount() {
+  computed:{
+    user() {
+      return this.$store.state.user
+    }
+  },
+  async mounted() {
+    const userStart = await this.$store.state.user
+    // get comments
+    if (userStart){
+      await api.get('comments').then(
+          (res) => {
+            this.comments = res.data
+          }
+      ).catch(
+          err => console.log(err)
+      );
+    }
+
+    // get portfolios
     await api.get('portfolios').then(
         res => this.portfolios = res.data
     ).catch(err => console.log(err))
