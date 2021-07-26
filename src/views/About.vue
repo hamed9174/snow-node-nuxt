@@ -9,8 +9,8 @@
 <script>
 import Header from '../components/common/Header'
 import {webUrl} from "../services/xhr";
-import api from '../services/api';
 import About from '../components/about'
+import {getAbout} from "../actions/actions";
 export default {
   name: "about",
   components: {
@@ -24,9 +24,7 @@ export default {
     }
   },
   async mounted() {
-    await api.get('about').then(
-        res => this.about = res.data
-    ).catch(err => console.log(err))
+    this.about = await getAbout()
   }
 }
 </script>

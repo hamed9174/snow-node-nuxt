@@ -39,7 +39,7 @@
 
 <script>
   import Header from '../components/common/Header'
-  import api from '../services/api'
+  import {getBlogs, getBlogsCategory} from "../actions/actions";
   export default {
     name: "Blog",
     head:{
@@ -60,18 +60,10 @@
       }
     },
     async beforeMount() {
-      await api.get('blogs').then(
-          res => {
-              this.blogs = res.data
-              this.blog = res.data
-          }
-      ).catch(err => console.log(err))
+      this.blogs = await getBlogs()
+      this.blog =this.blogs
 
-      await api.get('blog-category').then(
-          res => {
-              this.categories = res.data[0].categories
-          }
-      ).catch(err => console.log(err))
+      this.categories = await getBlogsCategory()
     },
     methods:{
       selectMenuActive(){

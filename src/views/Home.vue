@@ -151,8 +151,8 @@ import Brands from "../components/brands/Brands";
 import Blogs from "../components/blogs/Blogs";
 import Portfolio from '../components/portfolios/Portfolio'
 import {webUrl} from "../services/xhr";
-import api from "../services/api";
 import ContactForm from "../components/ContactForm";
+import {getPortfolio , getComments} from "../actions/actions";
 
 export default {
   name: 'Home',
@@ -192,19 +192,9 @@ export default {
     const userStart = await this.$store.state.user
     // get comments
     if (userStart){
-      await api.get('comments').then(
-          (res) => {
-            this.comments = res.data
-          }
-      ).catch(
-          err => console.log(err)
-      );
+      this.comments = await getComments()
     }
-
-    // get portfolios
-    await api.get('portfolios').then(
-        res => this.portfolios = res.data
-    ).catch(err => console.log(err))
+    this.portfolios = await getPortfolio()
   },
   methods: {
     GoToAbout(){

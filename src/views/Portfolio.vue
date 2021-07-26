@@ -38,6 +38,7 @@
 import Header from '../components/common/Header'
 import api from '../services/api'
 import Portfolio from '../components/portfolios/Portfolio'
+import {getPortfolio} from "../actions/actions";
   export default {
     name: "Portfolios",
     components: {
@@ -52,12 +53,8 @@ import Portfolio from '../components/portfolios/Portfolio'
       }
     },
     async beforeMount() {
-      await api.get('portfolios').then(
-          res => {
-              this.portfolios = res.data
-              this.portfolio = res.data
-            }
-      )
+      this.portfolios = await getPortfolio()
+      this.portfolio = this.portfolios
     },
     methods:{
       MenuActive(event , portfolios){
