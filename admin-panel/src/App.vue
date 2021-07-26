@@ -5,7 +5,7 @@
 <script>
   export default {
     name: 'App',
-    beforeCreate() {
+    create() {
       if (localStorage.getItem('token')){
         location.hash = '/'
       } else{
